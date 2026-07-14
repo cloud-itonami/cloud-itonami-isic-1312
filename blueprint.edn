@@ -1,0 +1,12 @@
+{:itonami.blueprint/id "cloud-itonami-1312"
+ :itonami.blueprint/name "Community Textile Weaving"
+ :itonami.blueprint/isic-rev5 "1312"
+ :itonami.blueprint/domain :textiles/weaving
+ :itonami.blueprint/license "AGPL-3.0-or-later"
+ :itonami.blueprint/social-impact [:fair-labor :local-industry :textile-craft]
+ :itonami.blueprint/governor :textile-weaving-governor
+ :itonami.blueprint/robotics true
+ :itonami.blueprint/required-technologies [:robotics :identity :forms :dmn :bpmn :audit-ledger :cae]
+ :itonami.blueprint/optional-technologies [:optimization :telemetry]
+ :itonami.blueprint/status :public-oss
+ :itonami.blueprint/maturity :blueprint}

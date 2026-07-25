@@ -2,16 +2,14 @@
   (:require [clojure.test :refer [deftest is]]
             [weaving.store :as store]))
 
-(deftest plant-registration
-  "Plants can be registered and verified."
+(deftest ^{:doc "Plants can be registered and verified."} plant-registration
   (let [st (store/mem-store)
         st (store/register-plant! st "mill-01" "Test Mill")
         st (store/verify-plant! st "mill-01")]
     (is (store/plant-registered? st "mill-01"))
     (is (store/plant-verified? st "mill-01"))))
 
-(deftest batch-registration
-  "Batches can be registered and verified."
+(deftest ^{:doc "Batches can be registered and verified."} batch-registration
   (let [st (store/mem-store)
         st (store/register-plant! st "mill-01" "Test Mill")
         st (store/register-batch! st "batch-01" "mill-01" "loom-01" "cotton" 100.0)
@@ -19,8 +17,7 @@
     (is (store/batch-registered? st "batch-01"))
     (is (store/batch-verified? st "batch-01"))))
 
-(deftest loom-registration
-  "Looms can be registered."
+(deftest ^{:doc "Looms can be registered."} loom-registration
   (let [st (store/mem-store)
         st (store/register-plant! st "mill-01" "Test Mill")
         st (store/register-loom! st "loom-01" "mill-01" 200)]
@@ -29,16 +26,14 @@
       (is (= "loom-01" (:id loom)))
       (is (= 200 (:width loom))))))
 
-(deftest quality-flags
-  "Quality issues can be flagged."
+(deftest ^{:doc "Quality issues can be flagged."} quality-flags
   (let [st (store/mem-store)
         st (store/register-plant! st "mill-01" "Test Mill")
         st (store/register-batch! st "batch-01" "mill-01" "loom-01" "cotton" 100.0)
         st (store/flag-quality-issue! st "batch-01" "weave-defect" "high")]
     (is (store/has-quality-flags? st "batch-01"))))
 
-(deftest maintenance-records
-  "Maintenance records can be logged."
+(deftest ^{:doc "Maintenance records can be logged."} maintenance-records
   (let [st (store/mem-store)
         st (store/register-plant! st "mill-01" "Test Mill")
         st (store/log-maintenance! st "mill-01" "loom-cleaning" "2026-07-14")]

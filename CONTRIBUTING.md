@@ -4,14 +4,14 @@
 
 1. Clone this repository
 2. Install Clojure/ClojureScript tools
-3. Run `clojure -M:test` to verify the test suite passes
+3. Run `kbb -M:test` to verify the test suite passes
 4. Create a feature branch for your work
 
 ## Code Standards
 
 - All code must be portable Clojure (`.cljc` files where possible, not JVM-only)
 - Tests are required for new features
-- Use `clojure -M:lint` to check for style issues
+- Use `kbb -M:lint` to check for style issues
 - Keep the Governor contract stable — protocol changes require ADR
 
 ## Governor Contract Stability
@@ -37,16 +37,16 @@ Add tests in `test/weaving/` for all new functionality:
 
 ```bash
 # Run all tests
-clojure -M:test
+kbb -M:test
 
 # Run with output
-clojure -M:test 2>&1 | tee test-output.log
+kbb -M:test 2>&1 | tee test-output.log
 ```
 
 ## Pull Request Process
 
-1. Ensure all tests pass: `clojure -M:test`
-2. Ensure linting passes: `clojure -M:lint`
+1. Ensure all tests pass: `kbb -M:test`
+2. Ensure linting passes: `kbb -M:lint`
 3. Document changes in commit message referencing ISIC 1312 context
 4. Link to any related cloud-itonami ADRs or issues
 

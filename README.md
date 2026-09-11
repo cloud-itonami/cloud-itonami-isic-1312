@@ -39,13 +39,13 @@ Those decisions remain the exclusive authority of licensed mill engineers.
 
 ```bash
 # Run all tests
-clojure -M:test
+kbb -M:test
 
 # Run linting
-clojure -M:lint
+kbb -M:lint
 
 # Run demo simulation
-clojure -M:dev:run
+kbb -M:dev:run
 ```
 
 ## Deployment

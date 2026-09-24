@@ -1,5 +1,5 @@
 (ns weaving.governor-contract-test
-  (:require [clojure.test :refer [deftest is]]
+  (:require [kotoba.test :refer [deftest is]]
             [weaving.store :as store]
             [weaving.advisor :as advisor]
             [weaving.governor :as governor]

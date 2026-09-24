@@ -1,5 +1,5 @@
 (ns weaving.phase-test
-  (:require [clojure.test :refer [deftest is]]
+  (:require [kotoba.test :refer [deftest is]]
             [weaving.phase :as phase]))
 
 (deftest ^{:doc "Initial state should be idle."} initial-phase-is-idle

@@ -1,5 +1,5 @@
 (ns weaving.store-contract-test
-  (:require [clojure.test :refer [deftest is]]
+  (:require [kotoba.test :refer [deftest is]]
             [weaving.store :as store]))
 
 (deftest ^{:doc "Plants can be registered and verified."} plant-registration
